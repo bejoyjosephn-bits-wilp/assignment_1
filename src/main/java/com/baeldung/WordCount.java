@@ -21,6 +21,7 @@ public class WordCount {
     public static void main(String[] args) throws Exception {
         if (args.length < 1) {
             System.err.println("Usage: JavaWordCount <file>");
+			System.err.println("just for info ");
             System.exit(1);
         }
         SparkConf sparkConf = new SparkConf().setAppName("JavaWordCount")
