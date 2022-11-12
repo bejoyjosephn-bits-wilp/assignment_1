@@ -25,7 +25,7 @@ public class MachineLearningApp {
 
     public static void main(String[] args) {
 
-        // 1. Setting the Spark Context
+        // 1. Setting the Context
         SparkConf conf = new SparkConf().setAppName("Main")
             .setMaster("local[2]")
             .set("spark.executor.memory", "3g")
