@@ -20,6 +20,7 @@ public class GraphLoader {
         SparkConf sparkConf = new SparkConf().setAppName("SparkGraphX").setMaster("local[*]");
         JavaSparkContext javaSparkContext = new JavaSparkContext(sparkConf);
         javaSparkContext.setCheckpointDir(temp.toString());
+		
         return javaSparkContext;
     }
 
@@ -39,7 +40,7 @@ public class GraphLoader {
         Dataset<Row> relationshipDataset = session.createDataFrame(relationshipsList, Relationship.class);
 
         GraphFrame graphFrame = new GraphFrame(userDataset, relationshipDataset);
-
+		Log.info("returning a a context")
         return graphFrame;
     }
 
