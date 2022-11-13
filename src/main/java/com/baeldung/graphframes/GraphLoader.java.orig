@@ -20,7 +20,11 @@ public class GraphLoader {
         SparkConf sparkConf = new SparkConf().setAppName("SparkGraphX").setMaster("local[*]");
         JavaSparkContext javaSparkContext = new JavaSparkContext(sparkConf);
         javaSparkContext.setCheckpointDir(temp.toString());
+<<<<<<< HEAD
+		
+=======
 		System.out.println(" test");
+>>>>>>> development
         return javaSparkContext;
     }
 
